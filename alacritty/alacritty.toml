@@ -1,0 +1,17 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/gruvbox_dark.toml"
+]
+
+[terminal.shell]
+program="/bin/zsh"
+
+[window]
+opacity=0.9
+padding.x=20
+padding.y=20
+
+[font]
+normal.family = "Iosevka Nerd Font"
+size=12.0
+
