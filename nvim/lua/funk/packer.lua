@@ -6,13 +6,14 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.8',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+
 	use {
-		"navarasu/onedark.nvim",
-		as = 'onedark',
+		"ellisonleao/gruvbox.nvim",
+		as = 'gruvbox',
 		config = function() 
-			vim.cmd('colorscheme onedark')
+			vim.cmd('colorscheme gruvbox')
 		end
-	}
+    }
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use ('nvim-treesitter/playground')
 	use ('ThePrimeagen/harpoon')
