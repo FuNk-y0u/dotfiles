@@ -1,0 +1,9 @@
+configuration {
+    font: "Iosevka Nerd Font 11";
+
+    display-drun:   "> ";
+
+    dpi: 100;
+}
+
+@theme "kanagawa_wave"

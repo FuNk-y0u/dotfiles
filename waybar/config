@@ -1,0 +1,114 @@
+{
+	"layer": "top",
+	"modules-left": ["custom/launcher", "backlight", "wireplumber", "tray", "power-profiles-daemon"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": ["network", "cpu", "memory", "battery", "clock"],
+	
+  "wireplumber": {
+    "tooltip": false,
+    "scroll-step": 5,
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟  {volume}%",
+    "on-click":"better-control -v",
+    "format-icons": {
+      "default": [" ", " ", " "]
+    }
+  },
+  "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+          "default": " ",
+          "performance": " ",
+          "balanced": " ",
+          "power-saver": " "
+      }
+  },
+
+
+  "network": {
+    "tooltip": false,
+    "format-wifi": "  {essid}",
+    "format-ethernet": "",
+    "on-click":"better-control -w",
+	},
+
+
+	"backlight": {
+		"tooltip": false,
+		"format": " {}%",
+		"interval":1,
+        "on-scroll-up": "light -A 5",
+		"on-scroll-down": "light -U 5",
+        "on-click": "better-control -d"
+	},
+
+
+  "battery": {
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "interval": 3,
+        "format-charging": "{capacity}% {icon}  󱐋"
+    },
+
+
+  "clock": {
+      "format": "󰥔  {:%Y-%m-%d %I:%M %p}",
+      "on-click": "gnome-calendar",
+      "tooltip": false
+  },
+
+
+  "cpu": {
+      "interval": 15,
+      "format": "  {}%",
+      "max-length": 10,
+      "on-click":"alacritty -e htop"
+  },
+
+
+  "memory": {
+      "interval": 30,
+      "format": "  {}%",
+      "max-length": 10
+  },
+
+
+  "custom/media": {
+      "interval": 30,
+      "format": "{icon} {}",
+      "return-type": "json",
+      "max-length": 20,
+      "format-icons": {
+          "spotify": " ",
+          "default": " "
+      },
+      "escape": true,
+      "exec": "$HOME/.config/system_scripts/mediaplayer.py 2> /dev/null",
+      "on-click": "playerctl play-pause"
+  },
+
+
+  "custom/launcher":{
+      "format": " ",
+      "on-click": "better-control",
+      "on-click-right": "killall rofi"
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10,
+    // "show-passive-items": true, // Uncomment to show inactive tray icons
+  },
+
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+    },
+    "active": "",
+    "sort-by-number": true
+  },
+}
