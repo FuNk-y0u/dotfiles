@@ -1,3 +1,3 @@
 # FUNK's DOTFILES :D
 
-![alt text](https://github.com/FuNk-y0u/funks_dotfiles/blob/main/images.jpg?raw=true)
+![My Setup](https://raw.githubusercontent.com/FuNk-y0u/funks_dotfiles/refs/heads/main/images/images.jpg)
